@@ -8,12 +8,19 @@
 
     <style>
         #border {
-            height: 496px;
-            width: 100%;
+            border: 5px solid green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1093px;
+            height: 525px;
             background-color: #aa1414;
         }
 
-        #character{
+        #character {
             height: 135px;
             width: 60px;
             background-color: blue;
@@ -22,20 +29,31 @@
             left: 0;
         }
 
-        #blocks{
+        #blocks {
             height: 135px;
             width: 60px;
             background-color: black;
             position: absolute;
             bottom: 0;
             right: 0;
+            animation: blocks 1s infinite linear;
+        }
+
+        @keyframes blocks {
+            0% {
+                left: 923px;
+            }
+
+            100% {
+                left: 0px;
+            }
         }
     </style>
 </head>
 <body>
-    <div id="border">
-        <div id="character"></div>
-        <div id="blocks"></div>
-    </div>
+<div id="border">
+    <div id="character"></div>
+    <div id="blocks"></div>
+</div>
 </body>
 </html>
