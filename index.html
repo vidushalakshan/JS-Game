@@ -7,6 +7,9 @@
     <link href="assests/css/style.css" rel="stylesheet">
 
     <style>
+        *{
+            background-color: black;
+        }
         #border {
             border: 5px solid green;
             position: absolute;
@@ -17,35 +20,39 @@
             margin: auto;
             width: 1093px;
             height: 525px;
-            background-color: #aa1414;
         }
 
         #character {
-            height: 135px;
-            width: 60px;
-            background-color: blue;
+            height: 223px;
+            width: 280px;
             position: absolute;
             bottom: 0;
             left: 0;
+            background: url("assests/image/sonic.gif");
+            background-size: cover;
         }
 
         #blocks {
             height: 135px;
             width: 60px;
-            background-color: black;
+            background-color: #c72828;
             position: absolute;
             bottom: 0;
             right: 0;
-            animation: blocks 1s infinite linear;
+            animation: blocks 1.33s infinite linear;
+        }
+
+        #score{
+           text-align: center;
         }
 
         @keyframes blocks {
             0% {
-                left: 923px;
+                left: 1093px;
             }
 
             100% {
-                left: 0px;
+                left: -50px;
             }
         }
     </style>
@@ -54,6 +61,7 @@
 <div id="border">
     <div id="character"></div>
     <div id="blocks"></div>
+    <h1 id="score">0</h1>
 </div>
 </body>
 </html>
