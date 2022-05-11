@@ -7,9 +7,10 @@
     <link href="assests/css/style.css" rel="stylesheet">
 
     <style>
-        *{
+        * {
             background-color: black;
         }
+
         #border {
             border: 5px solid green;
             position: absolute;
@@ -45,8 +46,8 @@
             background-size: cover;
         }
 
-        #score{
-           text-align: center;
+        #score {
+            text-align: center;
         }
 
         @keyframes blocks {
@@ -58,6 +59,28 @@
                 left: -50px;
             }
         }
+
+        .animate {
+            animation: jump 0.4s linear;
+        }
+
+        @keyframes jump {
+            0% {
+                bottom: 0px;
+            }
+
+            30% {
+                bottom: 30px;
+            }
+
+            70% {
+                bottom: 40px;
+            }
+
+            100% {
+                bottom: 0px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,19 +89,8 @@
     <div id="blocks"></div>
     <h1 id="score">0</h1>
 </div>
-
 <script src="assests/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assests/jQuery/oridomi.min.js"></script>
-
-<script>
-var counter=0;
-var alive=true;
-var CharacterMin;
-var CharcterMax;
-var CharcterLeft=0;
-
-
-
-</script>
+<script src="assests/js/js.js"></script>
 </body>
 </html>
