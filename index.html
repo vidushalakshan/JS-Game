@@ -8,7 +8,7 @@
 
     <style>
         * {
-            background-color: black;
+
         }
 
         #border {
@@ -21,13 +21,15 @@
             margin: auto;
             width: 1093px;
             height: 525px;
+            background: url("assests/image/images.png");
+            background-size: cover;
         }
 
         #character {
-            height: 223px;
-            width: 280px;
+            width: 200px;
+            height: 213px;
             position: absolute;
-            bottom: 0;
+            bottom: 99px;
             left: 0;
             z-index: 1;
             background: url("assests/image/sonic.gif");
@@ -35,14 +37,13 @@
         }
 
         #blocks {
-            height: 135px;
-            width: 60px;
-            background-color: #c72828;
+            height: 126px;
+            width: 231px;
             position: absolute;
-            bottom: 0;
+            bottom: 105px;
             right: 0;
             animation: blocks 1.33s infinite linear;
-            background: url("assests/image/fire/3J.gif");
+            background: url("assests/image/fire/3j.gif");
             background-size: cover;
         }
 
@@ -66,19 +67,19 @@
 
         @keyframes jump {
             0% {
-                bottom: 0px;
+                bottom: 99px;
             }
 
             30% {
-                bottom: 30px;
+                bottom: 170px;
             }
 
             70% {
-                bottom: 40px;
+                bottom: 250px;
             }
 
             100% {
-                bottom: 0px;
+                bottom: 99px;
             }
         }
     </style>

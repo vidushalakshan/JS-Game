@@ -8,9 +8,9 @@ $(document).keydown(function (e) {
     CharacterMin = $("#character").position().left;
 
     if (e.keyCode == 32 && alive) {
-        $("#character").addclass("animate");
+        $("#character").addClass("animate");
         setTimeout(function () {
-            $("#character").removeclass("animate");
+            $("#character").removeClass("animate");
         }, 400);
     } else if (e.keyCode == 39 && alive) {
         CharcterLeft += 10;
