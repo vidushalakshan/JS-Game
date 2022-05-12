@@ -7,8 +7,7 @@
     <link href="assests/css/style.css" rel="stylesheet">
 
     <style>
-        * {
-
+        body{
         }
 
         #border {
@@ -32,18 +31,21 @@
             bottom: 99px;
             left: 0;
             z-index: 1;
-            background: url("assests/image/sonic.gif");
-            background-size: cover;
+            background-image: url("assests/image/sonic.gif");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
         }
 
         #blocks {
-            height: 126px;
-            width: 231px;
+            height: 80px;
+            width: 204px;
             position: absolute;
             bottom: 105px;
             right: 0;
             animation: blocks 1.33s infinite linear;
-            background: url("assests/image/fire/3j.gif");
+            background: url("assests/image/fire/3j.png");
             background-size: cover;
         }
 
@@ -53,11 +55,11 @@
 
         @keyframes blocks {
             0% {
-                left: 1093px;
+                left: 903px;
             }
 
             100% {
-                left: -50px;
+                left: -46px;
             }
         }
 
