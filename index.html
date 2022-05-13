@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +29,7 @@
             width: 200px;
             height: 213px;
             position: absolute;
-            bottom: 99px;
+            bottom: 78px;
             left: 0;
             z-index: 1;
             background-image: url("assests/image/sonic.gif");
@@ -84,13 +85,20 @@
                 bottom: 99px;
             }
         }
+
+        .colour{
+            color: red;
+            font-size: 30px;
+        }
     </style>
 </head>
 <body>
 <div id="border">
     <div id="character"></div>
     <div id="blocks"></div>
-    <h1 id="score">0</h1>
+    <p id="score"><strong>Space</strong> to jump</p>
+    <p id="score"><strong>Press Enter</strong> to refresh if Game Over!</p>
+    <p id="score" class="colour">Score:<strong> <span id="scoreSpan"></span></strong></p>
 </div>
 <script src="assests/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assests/jQuery/oridomi.min.js"></script>
