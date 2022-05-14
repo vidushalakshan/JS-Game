@@ -25,41 +25,27 @@ $(document).keydown(function (e) {
     }
 });
 
-function deadCheck() {
-    var bottomCharacter=parseInt($("#character").css("bottom"));
-    var blockLeft=parseInt($("#blocks").css("left"));
-
-    CharacterMin=$("#character").position().left;
-    CharcterMax=$("#character").position().left + 200 ;
+const character = document.getElementById("character");
+const blocks = document.getElementById("blocks");
+const score = document.getElementById("scoreSpan");
 
 
-    if (
-        blockLeft<=CharcterMax && blockLeft >= CharacterMin && blockLeft >= -40 && bottomCharacter <=20
-    ){
-        $("#blocks").css({
-            animation: "none", // stop animation
-        });
-        counter = 0; // endgame
-        $("#scoreSpan").html(counter);
-        $("#character").addClass("rotated");
-        alive = false; // dino's dead, baby. dino's dead.
-        $(document).keydown(function (e) {
-            if (e.keyCode == 82) { // press "r" to start again
-                location.reload();
-            }
-        });
-    }else if (
-        blockLeft != CharcterMax&&
-        blockLeft != CharacterMin &&
-        bottomCharacter >= 20
-    ) {
-        counter += 1;
-        $("#scoreSpan").html(counter);
+setInterval(() => {
+    const characterTop = parseInt(window.getComputedStyle(character)
+        .getPropertyValue('top'));
+    const blockLeft = parseInt(window.getComputedStyle(blocks)
+        .getPropertyValue('left'));
+    score.innerText++;
+
+    if (blockLeft < 0) {
+        blocks.style.display = 'none';
+    } else {
+        blocks.style.display = ''
     }
 
-}
-
-
-$(document).ready(function () {
-    setInterval(deadCheck, 10); // let's run this function every 10ms
-});
+    if (blockLeft < 50 && blockLeft > 0 && characterTop > 150) {
+        alert("You got a score of: " + score.innerText +
+            "\n\nPlay again?");
+        location.reload();
+    }
+}, 50);
